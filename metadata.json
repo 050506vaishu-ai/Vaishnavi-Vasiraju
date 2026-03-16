@@ -1,5 +1,5 @@
 {
   "name": "NutriAI - Personalized AI Diet Planner",
-  "description": "A comprehensive AI-powered diet planning and tracking application with phone authentication, personalized recipes, and visual calorie tracking.",
+  "description": "A comprehensive AI-powered diet planning and tracking application with email authentication, personalized recipes, and visual calorie tracking.",
   "requestFramePermissions": ["camera", "microphone"]
 }

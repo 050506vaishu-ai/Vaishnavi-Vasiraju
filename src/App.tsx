@@ -6,7 +6,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  Phone, 
+  Mail, 
   ChevronRight, 
   ChevronLeft, 
   Scale, 
@@ -33,7 +33,7 @@ type DietType = 'Vegetarian' | 'Non-Vegetarian' | 'Vegan';
 type Goal = 'Weight Loss' | 'Weight Gain' | 'Muscle Gain' | 'Fitness Maintenance' | 'Healthy Lifestyle' | 'Diabetes Control' | 'Heart Health';
 
 interface UserData {
-  phone: string;
+  email: string;
   height: string;
   weight: string;
   age: string;
@@ -58,7 +58,7 @@ export default function App() {
   const [currentStep, setCurrentStep] = useState(0);
   const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState<UserData>({
-    phone: '',
+    email: '',
     height: '',
     weight: '',
     age: '',
@@ -201,18 +201,18 @@ export default function App() {
           >
             <form onSubmit={handleLogin} className="space-y-8">
               <div className="space-y-2">
-                <label className="block text-sm font-black text-slate-700 uppercase tracking-widest">Phone Number</label>
+                <label className="block text-sm font-black text-slate-700 uppercase tracking-widest">Email Address</label>
                 <div className="relative group">
                   <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl blur opacity-25 group-focus-within:opacity-50 transition duration-300" />
                   <div className="relative">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-indigo-500 w-6 h-6" />
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-indigo-500 w-6 h-6" />
                     <input 
-                      type="tel" 
+                      type="email" 
                       required
-                      placeholder="+1 234 567 8900"
+                      placeholder="hello@nutriai.com"
                       className="w-full pl-14 pr-6 py-5 rounded-2xl border-none bg-indigo-50/50 text-indigo-900 font-bold placeholder:text-indigo-300 focus:ring-0 outline-none transition-all text-lg"
-                      value={userData.phone}
-                      onChange={e => setUserData({...userData, phone: e.target.value})}
+                      value={userData.email}
+                      onChange={e => setUserData({...userData, email: e.target.value})}
                     />
                   </div>
                 </div>
